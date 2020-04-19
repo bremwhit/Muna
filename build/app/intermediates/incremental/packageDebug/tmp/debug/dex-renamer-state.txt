@@ -1,0 +1,4 @@
+#Sat Apr 18 20:28:52 CDT 2020
+base.0=C\:\\Users\\Brett\\Desktop\\muna\\muna\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
