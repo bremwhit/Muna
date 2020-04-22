@@ -1,26 +1,30 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-      home: Scaffold(
+void main() => runApp(MaterialApp(home: Quotelist()));
+
+class Quotelist extends StatefulWidget {
+  @override
+  _QuotelistState createState() => _QuotelistState();
+}
+
+class _QuotelistState extends State<Quotelist> {
+  List<String> quotes = [
+    'quote one',
+    'quote two',
+    'quote three',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          title: Text(
-            'Muna',
-            style: TextStyle(
-              fontSize: 60.0,
-              letterSpacing: 40,
-              fontFamily: 'Jura',
-            ),
-          ),
+          title: Text('Quote Cards'),
           centerTitle: true,
-          backgroundColor: Colors.red[600],
+          backgroundColor: Colors.greenAccent,
         ),
-        body: Center(
-          child: Text('Hello From \'body\''),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-          backgroundColor: Colors.red[600],
-        ),
-      ),
-    ));
+        body: Column(
+          children: quotes.map((quote) => Text(quote)).toList(),
+        ));
+  }
+}
