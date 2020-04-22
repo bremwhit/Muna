@@ -1,27 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'TestApp',
       home: Scaffold(
         appBar: AppBar(
           title: Text(
             'Muna',
             style: TextStyle(
-              fontSize: 60.0,
-              letterSpacing: 40,
-              fontFamily: 'Jura',
-            ),
+                fontFamily: 'Jura',
+                fontWeight: FontWeight.bold,
+                letterSpacing: 25,
+                fontSize: 40),
           ),
           centerTitle: true,
-          backgroundColor: Colors.red[600],
+          backgroundColor: Colors.green[300],
         ),
-        body: Center(
-          child: Text('Hello From \'body\''),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text('Hello World!'),
+            FlatButton(
+              onPressed: () {
+                print('button pressed');
+              },
+              color: Colors.amber,
+              child: Text('Button'),
+            ),
+            Container(
+              color: Colors.cyan,
+              padding: EdgeInsets.all(30),
+              child: Text('Inside Container'),
+            ),
+          ],
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: Icon(Icons.add),
-          backgroundColor: Colors.red[600],
+          onPressed: () {
+            print('Floating button pressed');
+          },
+          child: Text('BTN'),
+          backgroundColor: Colors.green[300],
         ),
       ),
-    ));
+    );
+  }
+}
