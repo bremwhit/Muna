@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'quote.dart';
+import 'QuoteCard.dart';
 
 void main() => runApp(MaterialApp(home: Quotelist()));
 
@@ -9,17 +10,13 @@ class Quotelist extends StatefulWidget {
 }
 
 class _QuotelistState extends State<Quotelist> {
+  /* LIST OF QUOTES HERE */
   List<Quote> quotes = [
     Quote(text: "quote one", author: "author one"),
     Quote(text: "quote two", author: "author two"),
     Quote(text: "quote three", author: "author three"),
+    Quote(text: "quote four", author: "author four"),
   ];
-
-  Widget quoteTempalte(quote) {
-    return Card(
-
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +28,7 @@ class _QuotelistState extends State<Quotelist> {
         backgroundColor: Colors.greenAccent,
       ),
       body: Column(
-        children: quotes
-            .map((quote) => Text('${quote.text} - ${quote.author}'))
-            .toList(),
+        children: quotes.map((quote) => QuoteCard(quote: quote)).toList(),
       ),
     );
   }
