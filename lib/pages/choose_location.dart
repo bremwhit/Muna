@@ -11,12 +11,12 @@ class _ChooseLocationState extends State<ChooseLocation> {
   @override
   void initState() {
     super.initState();
-    print('init state function ran');
+    print('Initialization function =>');
   }
 
   @override
   Widget build(BuildContext context) {
-    print('build function ran');
+    print('Build function =>');
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
