@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/brettwhitson/Desktop/Dev/Muna/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "C:\\Users\\lucia\\OneDrive\\Documents\\PersonalProjects\\Muna\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-lv\\values-lv.xml",
             "map": [
                 {
-                    "source": "/Users/brettwhitson/.gradle/caches/transforms-2/files-2.1/0a271e99b6771ad4a84318244d532fb7/core-1.0.0/res/values-lv/values-lv.xml",
+                    "source": "C:\\Users\\lucia\\.gradle\\caches\\transforms-2\\files-2.1\\0a271e99b6771ad4a84318244d532fb7\\core-1.0.0\\res\\values-lv\\values-lv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -10,9 +10,9 @@ class QuoteCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.fromLTRB(16, 16, 16, 0),
+      margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.fromLTRB(8, 8, 0, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
@@ -32,10 +32,17 @@ class QuoteCard extends StatelessWidget {
               ),
             ),
             SizedBox(height: 8),
-            FlatButton.icon(
-              onPressed: delete,
-              label: Text('delete quote'),
-              icon: Icon(Icons.delete),
+            ButtonBar(
+              alignment: MainAxisAlignment.end,
+              children: <Widget>[
+                FlatButton(
+                  child: Icon(
+                  Icons.delete,
+                  color: Colors.black,
+                  ),
+                onPressed: delete,
+                ),
+              ],
             ),
           ],
         ),

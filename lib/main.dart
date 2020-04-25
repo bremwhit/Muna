@@ -27,7 +27,7 @@ class _QuotelistState extends State<Quotelist> {
         centerTitle: true,
         backgroundColor: Colors.greenAccent,
       ),
-      body: Column(
+      body: ListView(
         children: quotes
             .map((quote) => QuoteCard(
                   quote: quote,
@@ -38,6 +38,14 @@ class _QuotelistState extends State<Quotelist> {
                   },
                 ))
             .toList(),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            quotes.add(new Quote(text: "new quote", author: "new author"));
+          });
+        },
+        child: Icon(Icons.add),
       ),
     );
   }
